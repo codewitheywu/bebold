@@ -171,7 +171,7 @@ nav.main-nav a.active{
   margin:0 auto;
   padding:24px 32px 80px;
   display:grid;
-  grid-template-columns:1.05fr 1fr;
+  grid-template-columns:1fr 1.2fr;
   gap:56px;
   align-items:start;
 }
@@ -288,7 +288,7 @@ h2{
 }
 .photo-frame{
   border-radius:18px;
-  height:560px;
+  aspect-ratio:3/2;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -299,7 +299,7 @@ h2{
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:center 68%;
+  object-position:center;
 }
 .photo-frame .placeholder{
   text-align:center;
@@ -481,6 +481,9 @@ h2{
 }
 .person-photo.unidentified{
   background:#eceef0;
+}
+.person-photo.photo-top img{
+  object-position:center top;
 }
 .avatar-circle{
   width:96px;
@@ -766,7 +769,6 @@ h2{
   .trust-grid{grid-template-columns:repeat(2,1fr);}
   .intro-split .section-inner{grid-template-columns:1fr; gap:24px;}
   .cta-box{grid-template-columns:1fr; padding:40px;}
-  .photo-frame{height:460px;}
 }
 @media (max-width:600px){
   .topbar, header.site-header, .breadcrumb, .hero,
@@ -796,5 +798,4 @@ h2{
   .people-grid{grid-template-columns:1fr;}
   .regions-list{grid-template-columns:1fr;}
   .footer-inner{grid-template-columns:1fr; gap:32px;}
-  .photo-frame{height:360px;}
 }
